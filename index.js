@@ -3,8 +3,8 @@ const app = express()
 const port = 3000
 
 const mongoose = require('mongoose')
-var db_config = require('./config/mongo-config.json')
-mongoose.connect(config.MONGO_URI)
+var db_config = require('./conf/mongo-config.json')
+mongoose.connect(db_config.MONGO_URI)
 .then(() => console.log('Mongodb Connected....'))
 .catch(err => console.log(err))
 
